@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this code or data documentation, please cite the paper:"
+authors:
+  - family-names: "Lim"
+    given-names: "Boon Chuan"
+    orcid: "https://orcid.org/0009-0005-8477-9393"
+title: "On-Chain Anatomy of the FTX Run: Pre-Disclosure Stablecoin Outflows and the Operational Halt"
+date-released: 2026-04-27
+url: "https://ssrn.com/abstract=6656560"
+type: software
+repository-code: "https://github.com/boonchuan/ftx-stablecoin-anatomy"
+license: MIT
+identifiers:
+  - type: url
+    value: "https://ssrn.com/abstract=6656560"
+    description: "SSRN abstract page"
