@@ -22,3 +22,17 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+# Additional exclusions for v1.0 paper release
+.env*
+*.env
+*.parquet
+data/binance_aggtrades/
+verify.txt
+prototype_*.png
+event_study.png
+placebo_distribution.png
+rolling_coef.png
+stress_chart.png
+
+# Keep the env template tracked
+!.env.example

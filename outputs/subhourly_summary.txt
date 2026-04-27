@@ -1,0 +1,13 @@
+APPENDIX A.3 SUB-HOURLY ROBUSTNESS - NUMERICAL RESULTS
+============================================================
+
+5-minute aggregation: 6,806 bins, mean tx/bin = 13.9, max = 154
+
+1-minute resolution near halt:
+  Tx in 5 min BEFORE 19:00 UTC Nov 8: 29
+  Tx in 5 min AFTER  19:00 UTC Nov 8: 6
+
+Inter-arrival time distributions:
+  Pre-news             n= 29897  mean=   42.9s  median=  36.0s  p10=  12.0s  p90=   84.0s
+  News (pre-halt)      n= 21334  mean=   27.5s  median=  24.0s  p10=  12.0s  p90=   60.0s
+  Post-halt            n=   406  mean=  150.1s  median=  72.0s  p10=  48.0s  p90=  252.0s

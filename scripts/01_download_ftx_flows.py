@@ -4,7 +4,11 @@ import pandas as pd
 from pathlib import Path
 from datetime import datetime
 
-ETHERSCAN_API_KEY = "Y23MRPSGEJNGPCSRTJBIHHF21FDR3Q8WYI"
+import os
+
+ETHERSCAN_API_KEY = os.environ.get("ETHERSCAN_API_KEY") or ""
+if not ETHERSCAN_API_KEY:
+    raise SystemExit("ETHERSCAN_API_KEY not set. Copy .env.example to .env and add your key.")
 
 DATA_DIR = Path("data/onchain")
 DATA_DIR.mkdir(parents=True, exist_ok=True)
