@@ -1,0 +1,24 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Data files (too large + private)
+data/
+*.parquet
+*.zip
+*.csv
+
+# Sensitive
+.env
+*api_key*
+secrets.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
