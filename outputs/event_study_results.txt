@@ -1,0 +1,51 @@
+==============================================================================
+APPENDIX A.4: EVENT STUDY AROUND NOVEMBER 2, 2022 COINDESK DISCLOSURE
+==============================================================================
+
+Event timestamp:  2022-11-02 14:44 UTC
+Sample window:    2022-10-15 to 2022-11-08 19:00 UTC
+Sample excludes the post-halt period (Nov 8 19:00 UTC onward).
+
+------------------------------------------------------------------------------
+PANEL A. PRE/POST MEAN COMPARISON WITH HAC STANDARD ERRORS
+------------------------------------------------------------------------------
+
+Series                         n_pre  n_post      mean_pre     mean_post     ratio   t (HAC)         p
+------------------------------------------------------------------------------------------------------
+Hourly transaction count         447     149        108.31        299.67      2.77     +2.42    0.0155
+Hourly absolute flow ($)         447     149    8191636.98   10723771.38      1.31     +1.45    0.1480
+
+HAC standard errors (Newey-West, lag = 24 hours).
+
+------------------------------------------------------------------------------
+PANEL B. CHOW TEST AT NOV 2, AR(1) MODEL
+------------------------------------------------------------------------------
+
+Series                           n      F-stat   df1   df2     p-value
+----------------------------------------------------------------------
+Hourly transaction count       595       9.646     2   591      0.0001
+Hourly absolute flow ($)       595       1.070     2   591      0.3437
+
+Null: same AR(1) intercept and slope pre/post Nov 2.
+
+------------------------------------------------------------------------------
+PANEL C. BAI-PERRON BREAKPOINT SEARCH (GRID, BIC SELECTION)
+------------------------------------------------------------------------------
+
+Series: Hourly transaction count
+  k             BIC  Breakpoints                                                 
+  0         6040.30  (no breaks)                                                 
+  1         5803.65  2022-11-04 21:00 UTC                                        
+  2         5741.03  2022-10-18 18:00 UTC, 2022-11-04 21:00 UTC                  
+  3         5732.70  2022-10-18 18:00 UTC, 2022-10-31 16:00 UTC, 2022-11-04 21:00 UTC
+  -> Selected by BIC: k = 3 breaks
+
+Series: Hourly absolute flow ($)
+  k             BIC  Breakpoints                                                 
+  0        19801.46  (no breaks)                                                 
+  1        19781.10  2022-10-25 16:00 UTC                                        
+  2        19782.28  2022-10-25 16:00 UTC, 2022-10-31 16:00 UTC                  
+  3        19779.72  2022-10-25 16:00 UTC, 2022-10-31 16:00 UTC, 2022-11-04 13:00 UTC
+  -> Selected by BIC: k = 3 breaks
+
+Trim = 15% of sample at each endpoint. Greedy grid for k > 1.
